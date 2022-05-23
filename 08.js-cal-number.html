@@ -8,63 +8,43 @@
     <title>08.js-cal-number.html</title>
 </head>
 <body>
-    input number : <input type="text" name="" id="num1" style="width: 50px">
+    Input Number: <input type="text" name="num1" id="num1" style="width: 50px;">
     <br>
-    input number : <input type="text" name="" id="num2" style="width: 50px">
-    <br><br>
-    <button style="width: 30" onclick="sum()"> +</button>
-    <button style="width: 30" onclick="minus()"> -</button>
-    <button style="width: 30" onclick="muitiply()"> *</button>
-    <button style="width: 30" onclick="devide()"> /</button>
-    <br><br>
-    <div id="output"></div>
-    <script>
+    Input Number: <input type="text" name="num2" id="num2" style="width: 50px;">
+    <br>
+    <br>
+    <button style="width: 30px;" onclick="sum()">+</button>
+    <button style="width: 30px;" onclick="minus()">-</button>
+    <button style="width: 30px;" onclick="multiply()">*</button>
+    <button style="width: 30px;" onclick="divide()">/</button>
+    <br>
+    <br>
+    <!-- Ans = <font id="output"></font> -->
+    <p id="output">Ans = </p>
 
-        let n1 = 0
-        let n2 = 0
-        let Ans = 0
-
-        function start() {
-            
-        
-        let n1 = Number (document.getElementById('num1').value)
-        let n2 = Number (document.getElementById('num2').value)
-        
-        }
-        function sum() {
-            Ans = n1 + n2
-            document.getElementById('output').innerHTML = Ans
-
-            
-        }
-
-
-
-
-        function sum() {
-        document.getElementById('output').innerHTML="Ans = " +
-        (Number (document.getElementById('num1').value)+
-        Number (document.getElementById('num2').value))
-            
-        }
-        function minus() {
-        document.getElementById('output').innerHTML="Ans = " +
-        (Number (document.getElementById('num1').value)-
-        Number (document.getElementById('num2').value))
-            
-        }
-         function muitiply() {
-        document.getElementById('output').innerHTML="Ans = " +
-        (Number (document.getElementById('num1').value)*
-        Number (document.getElementById('num2').value))
-             
-         }
-         function  devide() {
-        document.getElementById('output').innerHTML="Ans = " +
-       (Number (document.getElementById('num1').value)/
-        Number (document.getElementById('num2').value))
-         }
-
-    </script>
 </body>
+<script>
+        let n1 = 0
+        let n2 = 0 
+    function start(){
+        n1 = Number(document.getElementById('num1').value)
+        n2 = Number(document.getElementById('num2').value)
+    }
+    function sum() {
+        start()
+        document.getElementById('output').innerHTML = "Ans = " +(n1+n2)
+    }
+    function minus() {
+        start()
+        document.getElementById('output').innerHTML = "Ans = " +(n1-n2)
+    }
+    function multiply() {
+        start()
+        document.getElementById('output').innerHTML = "Ans = " +(n1*n2)
+    }
+    function divide() {
+        start()
+        document.getElementById('output').innerHTML = "Ans = " +(n1/n2)
+    }
+</script>
 </html>
