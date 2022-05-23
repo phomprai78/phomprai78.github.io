@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Phomprai Jandee -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08.js-cal-number.html</title>
+</head>
+<body>
+    input number : <input type="text" name="" id="num1" style="width: 50px">
+    <br>
+    input number : <input type="text" name="" id="num2" style="width: 50px">
+    <br><br>
+    <button style="width: 30" onclick="sum()"> +</button>
+    <button style="width: 30" onclick="minus()"> -</button>
+    <button style="width: 30" onclick="muitiply()"> *</button>
+    <button style="width: 30" onclick="devide()"> /</button>
+    <br><br>
+    <div id="output"></div>
+    <script>
+
+        let n1 = 0
+        let n2 = 0
+        let Ans = 0
+
+        function start() {
+            
+        
+        let n1 = Number (document.getElementById('num1').value)
+        let n2 = Number (document.getElementById('num2').value)
+        
+        }
+        function sum() {
+            Ans = n1 + n2
+            document.getElementById('output').innerHTML = Ans
+
+            
+        }
+
+
+
+
+        function sum() {
+        document.getElementById('output').innerHTML="Ans = " +
+        (Number (document.getElementById('num1').value)+
+        Number (document.getElementById('num2').value))
+            
+        }
+        function minus() {
+        document.getElementById('output').innerHTML="Ans = " +
+        (Number (document.getElementById('num1').value)-
+        Number (document.getElementById('num2').value))
+            
+        }
+         function muitiply() {
+        document.getElementById('output').innerHTML="Ans = " +
+        (Number (document.getElementById('num1').value)*
+        Number (document.getElementById('num2').value))
+             
+         }
+         function  devide() {
+        document.getElementById('output').innerHTML="Ans = " +
+       (Number (document.getElementById('num1').value)/
+        Number (document.getElementById('num2').value))
+         }
+
+    </script>
+</body>
+</html>
