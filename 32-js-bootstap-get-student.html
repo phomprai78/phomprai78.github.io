@@ -58,6 +58,8 @@
   "onload="get_array_data()">
 
 
+
+
   <div class="jumbotron jumbotron-fluid mb-0">
     <video src="https://cdn.videvo.net/videvo_files/video/free/2016-05/large_watermarked/473287184_preview.mp4" autoplay
       loop muted></video>></video>
@@ -92,20 +94,19 @@
     <div class="collapse navbar-collapse table-hover" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link text-light table-hover" href="32-js-bootstap-get-student.html">Home <span
+          <a class="nav-link text-light table-hover" href="#">Home<spanclass="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link text-light table-hover" href="31-js-bootstap-set-student.html">PAGE31 <span
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link text-light table-hover" href="31-js-bootstap-set-student.html">PAGE1 <span
+          <a class="nav-link text-light table-hover" href="32-js-bootstap-get-student.html">PAGE32 <span
               class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link text-light table-hover" href="31-js-bootstap-set-student.html">PAGE2 <span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light table-hover" href="32-js-bootstap-get-student.html">Link</a>
-        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link text-light table-hover" href="#">Link</a>
+        </li> -->
         <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                 Dropdown
@@ -161,21 +162,19 @@
 
                     let show_data = ''
                     function get_array_data() {
-                      l_sid = JSON.parse(localStorage.getItem('sid'))
-                      l_name = JSON.parse(localStorage.getItem('name'))
-                      l_phone = JSON.parse(localStorage.getItem('phone'))
-                      //  console.log(l_sid)
+                  l_sid = JSON.parse(localStorage.getItem('sid'))
+                  l_name = JSON.parse(localStorage.getItem('name'))
+                  l_phone = JSON.parse(localStorage.getItem('phone'))
+                  // console.log(l_sid)
+                  for (let i = 0; i < l_sid.length; i++) {
+                    show_data += '<tr><th scope="row">' + i +'</th><td>' + l_sid[i] + '</th><td>' + l_name[i] + '</td><td>' + l_phone[i] + '</td></tr>'
+                    // show_data += l_sid[i] + '' + l_name[i] + '' + l_phone[i] + '<br>'
+                    document.getElementById('output').innerHTML = show_data
+                  // <tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr>
+                  }
 
-                      for (let i = 0; i < l_sid.length; i++){
-                      show_data+= '<tr><th scope="row">' + i + '</tr><td>'+ l_sid[i] + '</td>td'+l_sname[i]+'</td><td>'+l_phon[i]+'</td><tr>'
-                      // { 
-                        // show_data += l_sid[i] + ' ' + l_sname[i] + ' ' + l_tol[i] + '<br>'
-
-                        document.getElementById('output').innerHTML = show_data
-
-                      } show_data = ''
-                    }
-
+                  show_data = ''
+                }
 // document.getElementById('output').innerHTML='<tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr>'
                       
                   </script>
